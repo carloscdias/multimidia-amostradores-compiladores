@@ -170,7 +170,6 @@ f 0 2
 i 1 0 0.5
 e
 
-
 </CsScore>
 </CsoundSynthesizer>
   </textarea>
@@ -201,12 +200,12 @@ e
       }
     }
 
-    var started = false;
     // click handler
     function compileAndRun() {
       let code = document.getElementById("csound_code").value;
+      csound.Reset();
       csound.compileCsdText(code);
-      csound.start();
+      csound.Play();
     }
   </script>
   
