@@ -203,9 +203,9 @@ e
     // click handler
     function compileAndRun() {
       let code = document.getElementById("csound_code").value;
-      csound.Reset();
-      csound.compileCsdText(code);
-      csound.Play();
+      csound.Csound.reset();
+      csound.Csound.compileCSD(code);
+      csound.Csound.play();
     }
   </script>
   
