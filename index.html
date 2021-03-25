@@ -17,6 +17,16 @@
     border-style: solid;
     padding: 20px 0px;
 }
+#csound_code {
+    font-family: Monospace;
+    font-size: 16px;
+    width: 805px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    padding: 20px 0px;
+}
 </style>
 <body>
   <h1>
@@ -198,13 +208,11 @@ e
     // click handler
     function compileAndRun() {
       let code = document.getElementById("csound_code").value;
-      csound.Csound.reset();
-      csound.Csound.compileCSD(code);
-      csound.Csound.play();
+      //csound.Reset();
+      csound.CompileCsdText(code)
+      csound.Play();
     }
   </script>
-  
-  - inserir sintetizador online csound/cmusic com exemplo de código
   <h3>Fontes</h3>
   <ul>
     <li>Manual de Estudio (Disponibilizado na página da disciplina no moodle)</li>
