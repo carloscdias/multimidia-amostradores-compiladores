@@ -150,7 +150,8 @@ e espectro harmônico, além de prover também recursos de controle em tempo rea
 mesmo que limitado.
 
 Você pode ser um(a) programad@r DJ abaixo editando, compilando e gerando seu próprio som
-com CSound nesta aplicação especialmente desenvolvida para a disciplina.
+com CSound nesta aplicação especialmente desenvolvida para a disciplina. Caso esteja
+sem criatividade, teste algum som disponível [na biblioteca de exemplos](http://www.csounds.com/manual/html/MiscExamples.html).
 
 **\*obs:** Devido à política do chrome de bloqueio de áudio, recomenda-se a utilização do editor no firefox
 
