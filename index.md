@@ -50,27 +50,30 @@
 
 <style>
 #console {
-    font-family: Monospace;
-    color: #b5b6ff;
-    background-color: #000000;
-    font-size: 16px;
-    width: 805px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-style: solid;
-    padding: 20px 0px;
+  font-family: Monospace;
+  color: #b5b6ff;
+  background-color: #000000;
+  font-size: 16px;
+  width: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  padding: 20px 0px;
+  margin: 20px 0;
 }
 
 #csound_code {
-    font-family: Monospace;
-    font-size: 16px;
-    width: 805px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-style: solid;
-    padding: 20px 0px;
+  font-family: Monospace;
+  font-size: 16px;
+  width: 620px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  padding: 5px 0px;
+  margin: 20px 0;
 }
 </style>
 
@@ -180,7 +183,7 @@ linguagens de programação.
 Seja um programador DJ abaixo editando, compilando e gerando seu próprio som
 com CSound.
 
-<textarea id="csound_code" name="csound_code" cols="200" rows="7">
+<textarea id="csound_code" name="csound_code">
 <CsoundSynthesizer>
 <CsOptions>
 ; Select audio/midi flags here according to platform
@@ -220,7 +223,7 @@ e
 </CsScore>
 </CsoundSynthesizer>
 </textarea>
-<textarea id="console" readonly name="console" cols="30" rows="7"></textarea>
+<textarea id="console" readonly name="console"></textarea>
 <button id="compile">Compilar e tocar</button>
 
 \*obs: devido à política do chrome de bloqueio de áudio, recomenda-se a utilização do editor no firefox
