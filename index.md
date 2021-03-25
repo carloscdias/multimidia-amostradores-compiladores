@@ -55,6 +55,7 @@
   background-color: #000000;
   font-size: 16px;
   width: 620px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
