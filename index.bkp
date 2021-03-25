@@ -54,6 +54,7 @@
 
   </script>
 </head>
+
 <style>
 #console {
     font-family: Monospace;
@@ -67,6 +68,7 @@
     border-style: solid;
     padding: 20px 0px;
 }
+
 #csound_code {
     font-family: Monospace;
     font-size: 16px;
@@ -82,6 +84,7 @@
   <h1>
     Técnicas de síntese digital de som: amostradores e compiladores acústicos
   </h1>
+
   <h2>Amostradores de áudio</h2>
   <p>
     Amostradores de áudio, ou samplers, são sintetizadores de áudio PCM que utilizam uma memória RAM
