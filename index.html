@@ -190,6 +190,8 @@ e
     function attachListeners() {
       document.getElementById("compile").
       addEventListener("click", compileAndRun);
+      document.getElementById("csound_code").
+      addEventListener("change", reset);
     }
 
     var count = 0;
@@ -207,12 +209,23 @@ e
 
     var started = false;
 
-    // click handler
-    function compileAndRun() {
+    function reset() {
+      csound.Csound.stop();
+      csound.Csound.reset();
+      started = false;
+    }
+
+    function play() {
       let code = document.getElementById("csound_code").value;
       csound.Csound.compileCSD(code);
       csound.Csound.start();
       started = true;
+    }
+
+    // click handler
+    function compileAndRun() {
+      reset();
+      play();
     }
   </script>
   <h3>Fontes</h3>
