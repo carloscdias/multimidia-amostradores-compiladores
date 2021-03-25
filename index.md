@@ -149,7 +149,7 @@ interação mais intuitiva na especificação e edição de tabelas de onda, env
 e espectro harmônico, além de prover também recursos de controle em tempo real,
 mesmo que limitado.
 
-Você pode ser um(a) programad@r DJ abaixo editando, compilando e gerando seu próprio som
+Você pode ser umx programadorx DJ abaixo editando, compilando e gerando seu próprio som
 com CSound nesta aplicação especialmente desenvolvida para a disciplina. Caso esteja
 sem criatividade, teste algum som disponível [na biblioteca de exemplos](http://www.csounds.com/manual/html/MiscExamples.html).
 
