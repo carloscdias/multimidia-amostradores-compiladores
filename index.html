@@ -6,9 +6,14 @@
   <script type="text/javascript" src="js/csound.js"></script>
   <script>
     // called by csound.js
+    var context = null;
     function moduleDidLoad() {
       console.log("Module loaded!");
-      var context = new AudioContext();
+      context = new AudioContext();
+    }
+
+    function getAudioContext() {
+      return context;
     }
 
     function attachListeners() {
