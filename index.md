@@ -112,7 +112,7 @@ utilizável na edição de timbres, a partir daí é realizado um processo igual
 digitais convencionais que utilizam síntese subtrativa para obter o resultado final,
 um timbre que pode ser controlado por um teclado ou por um seqüenciador MIDI.
 
-![Processo de entrada de áudio no sampler](/img/sampler.png =600x)
+![Processo de entrada de áudio no sampler](/img/sampler.png?s=200)
 
 A principal diferença do sampler para um sintetizador comum é que as formas-de-onda não
 estão fixas na memória ROM, e podem ser carregadas pelo usuário. Isso faz do sampler um
