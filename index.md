@@ -88,8 +88,6 @@
 }
 </style>
 
-# Técnicas de síntese digital de som: amostradores e compiladores acústicos
-
 ## Amostradores de áudio
 
 Amostradores de áudio, ou samplers, são sintetizadores de áudio PCM que utilizam uma memória RAM
@@ -118,16 +116,14 @@ A principal diferença do sampler para um sintetizador comum é que as formas-de
 estão fixas na memória ROM, e podem ser carregadas pelo usuário. Isso faz do sampler um
 equipamento dependente da qualidade das amostras que serão sampleadas pelo próprio usuário
 ou carregadas a partir de mídia externa criadas por empresas especializadas.
-O sampler dá ao compositor uma maior flexibilidade, já que 
-O sampler é, portanto, um instrumento extremamente flexível e “atualizável”, pois a parte
-principal - os timbres - podem ser trocados desde a fonte, diferentemente de um sintetizador
-que possui formas-de-onda fixas, para sempre.
+O sampler dá ao compositor uma maior flexibilidade, já que os timbres podem ser trocados
+desde a fonte, diferentemente de um sintetizador que possui formas-de-onda fixas para sempre.
 
 Um dos trade-offs para um bom equipamento de sampling é o tamanho da memória disponível
 e seu custo. Um equipamento com pouca memória para alocação de sons é, em geral, mais
 barato, todavia, isto pode comprometer a qualidade do áudio, visto que com poucos
 sons disponíveis na memória RAM do dispositivo é necessário um processamento interno
-para atingir notas não armazenadas, este processamento terá as mesmas características
+para atingir notas não armazenadas, este processamento não terá as mesmas características
 do som original, caso a nota fosse executada no instrumento musical físico e armazenada
 diretamente. Este comportamento faz com que um sampler com uma grande quantidade
 de memória RAM disponível seja ideal, mas o custo do equipamento também aumenta.
@@ -141,20 +137,20 @@ programação. Este mecanismo dá maior controle ao compositor, uma vez que, a s
 algoritmos arbitrários sejam programados.
 
 As linguagens de síntese musical mais difundidas são CMusic e CSound, mas existem
-muitas outras como o SuperCollider e ChucK. Estas linguagens permitem a definição
-de instrumentos virtuais que executam partituras formadas por listas de notas,
+muitas outras como o SuperCollider e ChucK, por exemplo. Estas linguagens permitem
+a definição de instrumentos virtuais que executam partituras formadas por listas de notas,
 cada uma com o seu tempo de início, duração, intensidade e timbre. Estas composições
 são realizadas em blocos, semelhantes às estruturas de linguagens de programação.
 
 Existem hoje sistemas mais eficientes de compiladores acústicos como, por exemplo,
 Accelerando, Kyma e IRCAM Musical Workstation, mas que são dedicados a hardware
-específico. Esstes sistemas incluem interface gráfica que possibilita uma 
+específico. Estes sistemas incluem interface gráfica que possibilita uma 
 interação mais intuitiva na especificação e edição de tabelas de onda, envelopes
 e espectro harmônico, além de prover também recursos de controle em tempo real,
 mesmo que limitado.
 
-Seja um programador DJ abaixo editando, compilando e gerando seu próprio som
-com CSound.
+Você pode ser um(a) programad@r DJ abaixo editando, compilando e gerando seu próprio som
+com CSound nesta aplicação especialmente desenvolvida para a disciplina.
 
 **\*obs:** Devido à política do chrome de bloqueio de áudio, recomenda-se a utilização do editor no firefox
 
