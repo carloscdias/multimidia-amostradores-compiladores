@@ -83,7 +83,7 @@
   justify-content: center;
   width: 150px;
   height: 30px;
-  font-size: 16px;
+  font-size: 15px;
   margin: auto;
 }
 </style>
