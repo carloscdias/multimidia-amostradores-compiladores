@@ -3,6 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Multimídia - Trabalho 3</title>
+  <script type="text/javascript" src="js/csound.js"></script>
+  <script>
+    // called by csound.js
+    function moduleDidLoad() {
+      console.log("Module loaded!");
+    }
+
+    function attachListeners() {
+      document.getElementById("compile").
+      addEventListener("click", compileAndRun);
+      document.getElementById("csound_code").
+      addEventListener("change", reset);
+    }
+
+    var count = 0;
+
+    function handleMessage(message) {
+      var element = document.getElementById('console');
+      element.value += message;
+      element.scrollTop = 99999; // focus on bottom
+      count += 1;
+      if (count == 1000) {
+        element.value = ' ';
+        count = 0;
+      }
+    }
+
+    var started = false;
+
+    function reset() {
+      csound.Csound.stop();
+      csound.Csound.reset();
+      started = false;
+    }
+
+    function play() {
+      let code = document.getElementById("csound_code").value;
+      csound.Csound.compileCSD(code);
+      csound.Csound.start();
+      started = true;
+    }
+
+    // click handler
+    function compileAndRun() {
+      if (started)
+        reset();
+      play();
+    }
+
+  </script>
 </head>
 <style>
 #console {
@@ -178,61 +228,8 @@ e
 </CsScore>
 </CsoundSynthesizer>
   </textarea>
-  <textarea id="console" name="console" cols="30" rows="10"></textarea>
+  <textarea id="console" readonly name="console" cols="30" rows="10"></textarea>
   <button id="compile">Compilar e tocar</button>
-  <script type="text/javascript" src="js/csound.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      console.log("DOM completamente carregado e analisado");
-      // called by csound.js
-      function moduleDidLoad() {
-        console.log("Module loaded!");
-      }
-
-      function attachListeners() {
-        document.getElementById("compile").
-        addEventListener("click", compileAndRun);
-        document.getElementById("csound_code").
-        addEventListener("change", reset);
-      }
-
-      var count = 0;
-
-      function handleMessage(message) {
-        var element = document.getElementById('console');
-        element.value += message;
-        element.scrollTop = 99999; // focus on bottom
-        count += 1;
-        if (count == 1000) {
-          element.value = ' ';
-          count = 0;
-        }
-      }
-
-      var started = false;
-
-      function reset() {
-        csound.Csound.stop();
-        csound.Csound.reset();
-        started = false;
-      }
-
-      function play() {
-        let code = document.getElementById("csound_code").value;
-        csound.Csound.compileCSD(code);
-        csound.Csound.start();
-        started = true;
-      }
-
-      // click handler
-      function compileAndRun() {
-        if (started)
-          reset();
-        play();
-      }
-    });
-
-  </script>
   <h3>Fontes</h3>
   <ul>
     <li>Manual de Estudio (Disponibilizado na página da disciplina no moodle)</li>
