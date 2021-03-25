@@ -6,14 +6,8 @@
   <script type="text/javascript" src="js/csound.js"></script>
   <script>
     // called by csound.js
-    var context = null;
     function moduleDidLoad() {
       console.log("Module loaded!");
-      context = new AudioContext();
-    }
-
-    function getAudioContext() {
-      return context;
     }
 
     function attachListeners() {
@@ -45,7 +39,6 @@
     }
 
     function play() {
-      getAudioContext().resume();
       let code = document.getElementById("csound_code").value;
       csound.Csound.compileCSD(code);
       csound.Csound.start();
