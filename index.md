@@ -112,7 +112,7 @@ utilizável na edição de timbres, a partir daí é realizado um processo igual
 digitais convencionais que utilizam síntese subtrativa para obter o resultado final,
 um timbre que pode ser controlado por um teclado ou por um seqüenciador MIDI.
 
-![Processo de entrada de áudio no sampler](/img/sampler.png)
+![Processo de entrada de áudio no sampler](/img/sampler.png =600x)
 
 A principal diferença do sampler para um sintetizador comum é que as formas-de-onda não
 estão fixas na memória ROM, e podem ser carregadas pelo usuário. Isso faz do sampler um
@@ -156,7 +156,7 @@ mesmo que limitado.
 Seja um programador DJ abaixo editando, compilando e gerando seu próprio som
 com CSound.
 
-*\*obs:* Devido à política do chrome de bloqueio de áudio, recomenda-se a utilização do editor no firefox
+**\*obs:** Devido à política do chrome de bloqueio de áudio, recomenda-se a utilização do editor no firefox
 
 <textarea id="csound_code" name="csound_code">
 <CsoundSynthesizer>
