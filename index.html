@@ -205,12 +205,14 @@ e
       }
     }
 
+    var started = false;
+
     // click handler
     function compileAndRun() {
       let code = document.getElementById("csound_code").value;
-      //csound.Reset();
-      csound.CompileCsdText(code)
-      csound.Play();
+      csound.Csound.compileCSD(code);
+      csound.Csound.start();
+      started = true;
     }
   </script>
   <h3>Fontes</h3>
