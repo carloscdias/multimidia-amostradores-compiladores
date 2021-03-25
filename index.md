@@ -1,54 +1,52 @@
-  <script type="text/javascript" src="js/csound.js"></script>
-  <script>
-    // called by csound.js
-    function moduleDidLoad() {
-      console.log("Module loaded!");
+<script type="text/javascript" src="js/csound.js"></script>
+<script>
+  // called by csound.js
+  function moduleDidLoad() {
+    console.log("Module loaded!");
+  }
+
+  function attachListeners() {
+    document.getElementById("compile").
+    addEventListener("click", compileAndRun);
+    document.getElementById("csound_code").
+    addEventListener("change", reset);
+  }
+
+  var count = 0;
+
+  function handleMessage(message) {
+    var element = document.getElementById('console');
+    element.value += message;
+    element.scrollTop = 99999; // focus on bottom
+    count += 1;
+    if (count == 1000) {
+      element.value = ' ';
+      count = 0;
     }
+  }
 
-    function attachListeners() {
-      document.getElementById("compile").
-      addEventListener("click", compileAndRun);
-      document.getElementById("csound_code").
-      addEventListener("change", reset);
-    }
+  var started = false;
 
-    var count = 0;
+  function reset() {
+    csound.Csound.stop();
+    csound.Csound.reset();
+    started = false;
+  }
 
-    function handleMessage(message) {
-      var element = document.getElementById('console');
-      element.value += message;
-      element.scrollTop = 99999; // focus on bottom
-      count += 1;
-      if (count == 1000) {
-        element.value = ' ';
-        count = 0;
-      }
-    }
+  function play() {
+    let code = document.getElementById("csound_code").value;
+    csound.Csound.compileCSD(code);
+    csound.Csound.start();
+    started = true;
+  }
 
-    var started = false;
-
-    function reset() {
-      csound.Csound.stop();
-      csound.Csound.reset();
-      started = false;
-    }
-
-    function play() {
-      let code = document.getElementById("csound_code").value;
-      csound.Csound.compileCSD(code);
-      csound.Csound.start();
-      started = true;
-    }
-
-    // click handler
-    function compileAndRun() {
-      if (started)
-        reset();
-      play();
-    }
-
-  </script>
-</head>
+  // click handler
+  function compileAndRun() {
+    if (started)
+      reset();
+    play();
+  }
+</script>
 
 <style>
 #console {
@@ -182,7 +180,7 @@ linguagens de programação.
 Seja um programador DJ abaixo editando, compilando e gerando seu próprio som
 com CSound.
 
-<textarea id="csound_code" name="csound_code" cols="30" rows="10">
+<textarea id="csound_code" name="csound_code" cols="200" rows="7">
 <CsoundSynthesizer>
 <CsOptions>
 ; Select audio/midi flags here according to platform
@@ -222,12 +220,12 @@ e
 </CsScore>
 </CsoundSynthesizer>
 </textarea>
-<textarea id="console" readonly name="console" cols="30" rows="10"></textarea>
+<textarea id="console" readonly name="console" cols="30" rows="7"></textarea>
 <button id="compile">Compilar e tocar</button>
 
 \*obs: devido à política do chrome de bloqueio de áudio, recomenda-se a utilização do editor no firefox
 
 ### Fontes
- - Manual de Estudio (Disponibilizado na página da disciplina no moodle)</li>
- - https://antigo.anppom.com.br/anais/anaiscongresso_anppom_1995/comppairelat3.htm</li>
- - https://csound.com/</li>
+ - Manual de Estudio (Disponibilizado na página da disciplina no moodle)
+ - https://antigo.anppom.com.br/anais/anaiscongresso_anppom_1995/comppairelat3.htm
+ - https://csound.com/
