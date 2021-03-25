@@ -224,7 +224,8 @@ e
 
     // click handler
     function compileAndRun() {
-      reset();
+      if (started)
+        reset();
       play();
     }
   </script>
